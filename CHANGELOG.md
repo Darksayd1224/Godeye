@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+- Resume Historic Fires from @lleon-at-navteca's #609 with the backend rebased
+  onto current ownership: event definitions live under
+  `src/data/local_data/fire_events/`, archive cache identity includes the
+  normalized event definition, failed FIRMS windows cool down before retry,
+  and historic-perimeter acquisition is no longer duplicated in this provider.
+
 - Street Level: a street-level imagery layer modelled on the iD editor's photo
   overlay, with Mapillary as its first provider (free client token, CC BY-SA 4.0
   imagery). One right-rail panel holds a chip per provider, shared 360°/flat and
