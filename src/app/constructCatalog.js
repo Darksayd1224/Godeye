@@ -1,6 +1,6 @@
 import { createWeatherClock } from '../layers/weather/clock.js';
 import { createWeatherLayer } from '../layers/weather/index.js';
-import { createCyclonesLayer } from '../layers/cyclones/index.js';
+import { createApplicationCyclones } from './layers/cyclones.js';
 import { createWindLayer } from '../layers/wind/index.js';
 import { createLayerCatalog } from './catalog.js';
 import { MAPILLARY_SOURCE_METHODS } from '../layers/streetLevel/providers/mapillary/policy.js';
@@ -188,7 +188,7 @@ export function createApplicationCatalog({
           id: 'weather-lightning',
           clock: weatherClock,
         }),
-        createCyclonesLayer({ feed: sources.cyclones }),
+        createApplicationCyclones({ feed: sources.cyclones }),
         ...createInfrastructureLayers(localGeoJsonServices),
         createApplicationCables({ source: sources.cables }),
         createApplicationFirms({
